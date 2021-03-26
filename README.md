@@ -12,6 +12,13 @@ There are 4 main types of code to be considered here:
   JIF scripts descriptions
 ############################
 
+JIFbove9 - used to produce graphs that considered how many publications had a JIF higher than 9 (i.e. a high JIF)
+
+JIFmapping - for mapping JIF to publications 
+
+rawnumbersgraph - considers files using the raw number of publications (with JIF already matched - use files produced from JIF mapping)
+
+
 #############################
   Venn scripts descriptions 
 #############################
@@ -26,6 +33,12 @@ manualinsertvalues - this script has all the format settings of Venn2biblio_scri
   MNCS scripts descriptions 
 #############################
 
+Correctedforyear - this script calculates the MNCS per year 
+
+replicateJRmock - an experimental script that could be used to group MNCS by field and year 
+
+fieldinx - another experimental script that shows much the same as replicateJRmock, but with the graph rearranged so that the fields, rather than year, are on the x-axis
+
 #################################
   PPtopten scripts descriptions 
 #################################
@@ -39,4 +52,4 @@ pptest - this script was created to calculate PP(top10) assuming you had no dire
 NOTE ABOUT PRODUCTION OF FILES FOR PRINT 
 ########################################
 
-Matplotlib (used for the venn diagram) can have settings adjusted such that files are generated with 300dpi. This was found to be sufficient resolution for print in the report. Plotly, unfortunately, does not have settings that enable the resolution to be set as directly. One workaround is to generate images that are much larger than required. It was found to be sufficient to generate graphs that were 1500 x 1500 pixels. It is important to adjust the axis text size to maintain readability. 
+Matplotlib (used for the venn diagram) can have settings adjusted such that files are generated with 300dpi. This was found to be sufficient resolution for print in the report. The resolution of images produced by plotly can be altered by changing the size of the image (1500 x 1500 pixels is sufficient - axis text must be adjusted accordingly in this case), or by using a package called kaleido when saving images and setting resolution there. 
